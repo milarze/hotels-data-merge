@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Read data from three endpoints, merge them, and serve it as a single unified
+data set.
 
-Things you may want to cover:
+## Filtering
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The default path is simply `/`.
+In order to filter, use `/?hotel_ids[]=iJhz&hotel_ids[]=SjyX`.
+Available params are `hotel_ids` and `destination_ids`.
