@@ -51,29 +51,8 @@ class Api3
 
     def self.from_json(json)
       new(
-        rooms: json["rooms"].map { |room| Image.from_json(room) },
-        site: json["site"].map { |site| Image.from_json(site) }
-      )
-    end
-  end
-
-  class Image
-    include ActiveModel::Model
-
-    attr_accessor :link, :caption
-
-    def initialize(
-      link:,
-      caption:
-    )
-      @link = link
-      @caption = caption
-    end
-
-    def self.from_json(json)
-      new(
-        link: json["link"],
-        caption: json["caption"]
+        rooms: json["rooms"].map { |room| Image.new(link: room["link"], description: room["caption"]) },
+        site: json["site"].map { |site| Image.new(link: site["link"], description: site["caption"]) }
       )
     end
   end

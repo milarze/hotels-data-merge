@@ -102,17 +102,17 @@ class Response
   class Image
     include ActiveModel::Model
 
-    attr_accessor :link, :caption
+    attr_accessor :link, :description
 
     validate :link, -> { is_a?(String) }
-    validate :caption, -> { is_a?(String) }
+    validate :description, -> { is_a?(String) }
 
     def initialize(
       link:,
-      caption:
+      description:
     )
       @link = link
-      @caption = caption
+      @description = description
     end
   end
 end

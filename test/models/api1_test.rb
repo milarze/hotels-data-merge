@@ -2,17 +2,7 @@ require "test_helper"
 
 class Api1Test < ActiveSupport::TestCase
   def test_from_json
-    json = {"Id" => "iJhz",
-            "DestinationId" => 5432,
-            "Name" => "Beach Villas Singapore",
-            "Latitude" => 1.264751,
-            "Longitude" => 103.824006,
-            "Address" => " 8 Sentosa Gateway, Beach Villas ",
-            "City" => "Singapore",
-            "Country" => "SG",
-            "PostalCode" => "098269",
-            "Description" => "  This 5 star hotel is located on the coastline of Singapore.",
-            "Facilities" => ["Pool", "BusinessCenter", "WiFi ", "DryCleaning", " Breakfast"]}
+    json = ActiveSupport::JSON.decode(File.read(Rails.root.join("test/fixtures/files/api1.json")))[0]
     api1 = ::Api1.from_json(json)
     assert_equal "iJhz", api1.id
     assert_equal 5432, api1.destination
