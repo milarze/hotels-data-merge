@@ -38,4 +38,22 @@ class ApiDataTest < ActiveSupport::TestCase
       assert_equal "Sentosa Gateway", response.images.amenities.second.description
     end
   end
+
+  def test_get_data_filtered_by_hotel_id
+    VCR.use_cassette("api_data_test") do
+      data = ApiData.new.get_data_filtered_by_hotel_ids(["iJhz"])
+      assert_equal 1, data.size
+      assert_equal "iJhz", data.first.id
+      assert_equal 5432, data.first.destination_id
+    end
+  end
+
+  def test_get_data_filtered_by_destination_id
+    VCR.use_cassette("api_data_test") do
+      data = ApiData.new.get_data_filtered_by_destination_ids([5432])
+      assert_equal 2, data.size
+      assert_equal 5432, data.first.destination_id
+      assert_equal 5432, data.second.destination_id
+    end
+  end
 end
