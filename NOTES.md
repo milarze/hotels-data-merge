@@ -100,3 +100,8 @@ and then transform the data.
 
 TDD is especially useful for data transformation work because there are no
 API calls being made, it only includes pure functions.
+
+Some instances where TDD is not useful is when data is being read from a remote
+source. In such cases, the VCR gem could be used, but in does not add much
+value if the SRP is being followed strictly since the "getter" classes would
+only be getting the data and handing it off to another class.

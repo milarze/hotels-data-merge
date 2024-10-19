@@ -2,10 +2,7 @@ class DataLoaders::Base
   include HttpRequest
 
   def load_all
-    data = JSON.parse(get(url).body)
-    data.each do |item|
-      puts item
-    end
+    JSON.parse(get(url).body)
   end
 
   def url
