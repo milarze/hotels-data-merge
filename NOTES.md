@@ -105,3 +105,12 @@ Some instances where TDD is not useful is when data is being read from a remote
 source. In such cases, the VCR gem could be used, but in does not add much
 value if the SRP is being followed strictly since the "getter" classes would
 only be getting the data and handing it off to another class.
+
+### VCR
+
+As development progressed it became obvious quickly that purely mocking data
+for classes that didn't call the API and then kind of not really testing the
+API calls was not going to work. While all the data transformations worked,
+integrating the entire system broke in many different places. This happens
+a lot in Ruby as the language is not statically typed. Having a full
+integration test suite would have caught these issues.

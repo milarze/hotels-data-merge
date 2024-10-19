@@ -1,0 +1,246 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/acme
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 5f2be0b4ffc88500167b85a0.mockapi.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1729357898&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=JT3l7QJCXVVvltvobWuNlXfKEctF5SgwBbj%2FoA6WJpY%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1729357898&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=JT3l7QJCXVVvltvobWuNlXfKEctF5SgwBbj%2FoA6WJpY%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With,Content-Type,Cache-Control,access_token
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1933'
+      Etag:
+      - '"-1897720411"'
+      Date:
+      - Sat, 19 Oct 2024 17:11:38 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siSWQiOiJpSmh6IiwiRGVzdGluYXRpb25JZCI6NTQzMiwiTmFtZSI6IkJlYWNoIFZpbGxhcyBTaW5nYXBvcmUiLCJMYXRpdHVkZSI6MS4yNjQ3NTEsIkxvbmdpdHVkZSI6MTAzLjgyNDAwNiwiQWRkcmVzcyI6IiA4IFNlbnRvc2EgR2F0ZXdheSwgQmVhY2ggVmlsbGFzICIsIkNpdHkiOiJTaW5nYXBvcmUiLCJDb3VudHJ5IjoiU0ciLCJQb3N0YWxDb2RlIjoiMDk4MjY5IiwiRGVzY3JpcHRpb24iOiIgIFRoaXMgNSBzdGFyIGhvdGVsIGlzIGxvY2F0ZWQgb24gdGhlIGNvYXN0bGluZSBvZiBTaW5nYXBvcmUuIiwiRmFjaWxpdGllcyI6WyJQb29sIiwiQnVzaW5lc3NDZW50ZXIiLCJXaUZpICIsIkRyeUNsZWFuaW5nIiwiIEJyZWFrZmFzdCJdfSx7IklkIjoiU2p5WCIsIkRlc3RpbmF0aW9uSWQiOjU0MzIsIk5hbWUiOiJJbnRlckNvbnRpbmVudGFsIFNpbmdhcG9yZSBSb2JlcnRzb24gUXVheSIsIkxhdGl0dWRlIjpudWxsLCJMb25naXR1ZGUiOm51bGwsIkFkZHJlc3MiOiIgMSBOYW5zb24gUm9hZCIsIkNpdHkiOiJTaW5nYXBvcmUiLCJDb3VudHJ5IjoiU0ciLCJQb3N0YWxDb2RlIjoiMjM4OTA5IiwiRGVzY3JpcHRpb24iOiJFbmpveSBzb3BoaXN0aWNhdGVkIHdhdGVyZnJvbnQgbGl2aW5nIGF0IHRoZSBuZXcgSW50ZXJDb250aW5lbnRhbMKuIFNpbmdhcG9yZSBSb2JlcnRzb24gUXVheSwgbHV4dXJ5J3MgcHJlZmVycmVkIGFkZHJlc3MgbmVzdGxlZCBpbiB0aGUgaGVhcnQgb2YgUm9iZXJ0c29uIFF1YXkgYWxvbmcgdGhlIFNpbmdhcG9yZSBSaXZlciwgd2l0aCB0aGUgQ0JEIGp1c3QgZml2ZSBtaW51dGVzIGRyaXZlIGF3YXkuIE1hZ25pZnlpbmcgdGhlIGNvbWZvcnRzIG9mIGhvbWUsIGVhY2ggb2Ygb3VyIDIyNSBzdHVkaW9zIGFuZCBzdWl0ZXMgZmVhdHVyZXMgYSBob3N0IG9mIHRob3VnaHRmdWwgYW1lbml0aWVzIHRoYXQgY29tYmluZSBtb2Rlcm5pdHkgd2l0aCBlbGVnYW5jZSwgd2hpbHN0IG1haW50YWluaW5nIGZ1bmN0aW9uYWwgcHJhY3RpY2FsaXR5LiBUaGUgaG90ZWwgYWxzbyBmZWF0dXJlcyBhIGNoaWMsIGx1eHVyaW91cyBDbHViIEludGVyQ29udGluZW50YWwgTG91bmdlLiIsIkZhY2lsaXRpZXMiOlsiUG9vbCIsIldpRmkgIiwiQWlyY29uIiwiQnVzaW5lc3NDZW50ZXIiLCJCYXRoVHViIiwiQnJlYWtmYXN0IiwiRHJ5Q2xlYW5pbmciLCJCYXIiXX0seyJJZCI6ImY4YzkiLCJEZXN0aW5hdGlvbklkIjoxMTIyLCJOYW1lIjoiSGlsdG9uIFNoaW5qdWt1IFRva3lvIiwiTGF0aXR1ZGUiOiIiLCJMb25naXR1ZGUiOiIiLCJBZGRyZXNzIjoiMTYwLTAwMjMsIFNISU5KVUtVLUtVLCA2LTYtMiBOSVNISS1TSElOSlVLVSwgSkFQQU4iLCJDaXR5IjoiVG9reW8iLCJDb3VudHJ5IjoiSlAiLCJQb3N0YWxDb2RlIjoiMTYwLTAwMjMiLCJEZXNjcmlwdGlvbiI6IkhpbHRvbiBUb2t5byBpcyBsb2NhdGVkIGluIFNoaW5qdWt1LCB0aGUgaGVhcnQgb2YgVG9reW8ncyBidXNpbmVzcywgc2hvcHBpbmcgYW5kIGVudGVydGFpbm1lbnQgZGlzdHJpY3QsIGFuZCBpcyBhbiBpZGVhbCBwbGFjZSB0byBleHBlcmllbmNlIG1vZGVybiBKYXBhbi4gQSBjb21wbGltZW50YXJ5IHNodXR0bGUgb3BlcmF0ZXMgYmV0d2VlbiB0aGUgaG90ZWwgYW5kIFNoaW5qdWt1IHN0YXRpb24gYW5kIHRoZSBUb2t5byBNZXRybyBzdWJ3YXkgaXMgY29ubmVjdGVkIHRvIHRoZSBob3RlbC4gUmVsYXggaW4gb25lIG9mIHRoZSBtb2Rlcm4gSmFwYW5lc2Utc3R5bGUgcm9vbXMgYW5kIGFkbWlyZSBzdHVubmluZyBjaXR5IHZpZXdzLiBUaGUgaG90ZWwgb2ZmZXJzIFdpRmkgYW5kIGludGVybmV0IGFjY2VzcyB0aHJvdWdob3V0IGFsbCByb29tcyBhbmQgcHVibGljIHNwYWNlLiIsIkZhY2lsaXRpZXMiOlsiUG9vbCIsIldpRmkgIiwiQnVzaW5lc3NDZW50ZXIiLCJEcnlDbGVhbmluZyIsIiBCcmVha2Zhc3QiLCJCYXIiLCJCYXRoVHViIl19XQ==
+  recorded_at: Sat, 19 Oct 2024 17:09:34 GMT
+- request:
+    method: get
+    uri: https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/patagonia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 5f2be0b4ffc88500167b85a0.mockapi.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1729357898&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=JT3l7QJCXVVvltvobWuNlXfKEctF5SgwBbj%2FoA6WJpY%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1729357898&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=JT3l7QJCXVVvltvobWuNlXfKEctF5SgwBbj%2FoA6WJpY%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With,Content-Type,Cache-Control,access_token
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2021'
+      Etag:
+      - '"-768752398"'
+      Date:
+      - Sat, 19 Oct 2024 17:11:38 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOiJpSmh6IiwiZGVzdGluYXRpb24iOjU0MzIsIm5hbWUiOiJCZWFjaCBWaWxsYXMgU2luZ2Fwb3JlIiwibGF0IjoxLjI2NDc1MSwibG5nIjoxMDMuODI0MDA2LCJhZGRyZXNzIjoiOCBTZW50b3NhIEdhdGV3YXksIEJlYWNoIFZpbGxhcywgMDk4MjY5IiwiaW5mbyI6IkxvY2F0ZWQgYXQgdGhlIHdlc3Rlcm4gdGlwIG9mIFJlc29ydHMgV29ybGQgU2VudG9zYSwgZ3Vlc3RzIGF0IHRoZSBCZWFjaCBWaWxsYXMgYXJlIGd1YXJhbnRlZWQgcHJpdmFjeSB3aGlsZSB0aGV5IGVuam95IHNwZWN0YWN1bGFyIHZpZXdzIG9mIGdsaXR0ZXJpbmcgd2F0ZXJzLiBHdWVzdHMgd2lsbCBmaW5kIHRoZW1zZWx2ZXMgaW4gcGFyYWRpc2Ugd2l0aCB0aGlzIHNlcmllcyBvZiBleHF1aXNpdGUgdHJvcGljYWwgc2FuY3R1YXJpZXMsIG1ha2luZyBpdCB0aGUgcGVyZmVjdCBzZXR0aW5nIGZvciBhbiBpZHlsbGljIHJldHJlYXQuIFdpdGhpbiBlYWNoIHZpbGxhLCBndWVzdHMgd2lsbCBkaXNjb3ZlciBsaXZpbmcgYXJlYXMgYW5kIGJlZHJvb21zIHRoYXQgb3BlbiBvdXQgdG8gbWluaSBnYXJkZW5zLCBwcml2YXRlIHRpbWJlciBzdW5kZWNrcyBhbmQgdmVyYW5kYWhzIGVsZWdhbnRseSBmcmFtaW5nIGVpdGhlciBsdXNoIGdyZWVuZXJ5IG9yIGFuIGV4cGFuc2Ugb2Ygc2VhLiBHdWVzdHMgYXJlIGFzc3VyZWQgb2YgYSBzdXBlcmlvciBzbHVtYmVyIHdpdGggZ29vc2UgZmVhdGhlciBwaWxsb3dzIGFuZCBsdXhlIG1hdHRyZXNzZXMgcGFpcmVkIHdpdGggNDAwIHRocmVhZCBjb3VudCBFZ3lwdGlhbiBjb3R0b24gYmVkIGxpbmVuLCB0YXN0ZWZ1bGx5IHBhaXJlZCB3aXRoIGEgZnVsbCBjb21wbGVtZW50IG9mIGx1eHVyaW91cyBpbi1yb29tIGFtZW5pdGllcyBhbmQgYmF0aHJvb21zIGJvYXN0aW5nIHJhaW4gc2hvd2VycyBhbmQgZnJlZS1zdGFuZGluZyB0dWJzIGNvdXBsZWQgd2l0aCBhbiBleGNsdXNpdmUgYXJyYXkgb2YgRVNQQSBhbWVuaXRpZXMgYW5kIHRvaWxldHJpZXMuIEd1ZXN0cyBhbHNvIGdldCB0byBlbmpveSBjb21wbGltZW50YXJ5IGRheSBhY2Nlc3MgdG8gdGhlIGZhY2lsaXRpZXMgYXQgQXNpYeKAmXMgZmxhZ3NoaXAgc3BhIOKAkyB0aGUgd29ybGQtcmVub3duZWQgRVNQQS4iLCJhbWVuaXRpZXMiOlsiQWlyY29uIiwiVHYiLCJDb2ZmZWUgbWFjaGluZSIsIktldHRsZSIsIkhhaXIgZHJ5ZXIiLCJJcm9uIiwiVHViIl0sImltYWdlcyI6eyJyb29tcyI6W3sidXJsIjoiaHR0cHM6Ly9kMmV5OXNxcnZrcWRmcy5jbG91ZGZyb250Lm5ldC8wcVpGLzIuanBnIiwiZGVzY3JpcHRpb24iOiJEb3VibGUgcm9vbSJ9LHsidXJsIjoiaHR0cHM6Ly9kMmV5OXNxcnZrcWRmcy5jbG91ZGZyb250Lm5ldC8wcVpGLzQuanBnIiwiZGVzY3JpcHRpb24iOiJCYXRocm9vbSJ9XSwiYW1lbml0aWVzIjpbeyJ1cmwiOiJodHRwczovL2QyZXk5c3FydmtxZGZzLmNsb3VkZnJvbnQubmV0LzBxWkYvMC5qcGciLCJkZXNjcmlwdGlvbiI6IlJXUyJ9LHsidXJsIjoiaHR0cHM6Ly9kMmV5OXNxcnZrcWRmcy5jbG91ZGZyb250Lm5ldC8wcVpGLzYuanBnIiwiZGVzY3JpcHRpb24iOiJTZW50b3NhIEdhdGV3YXkifV19fSx7ImlkIjoiZjhjOSIsImRlc3RpbmF0aW9uIjoxMTIyLCJuYW1lIjoiSGlsdG9uIFRva3lvIFNoaW5qdWt1IiwibGF0IjozNS42OTI2LCJsbmciOjEzOS42OTA5NjUsImFkZHJlc3MiOm51bGwsImluZm8iOm51bGwsImFtZW5pdGllcyI6bnVsbCwiaW1hZ2VzIjp7InJvb21zIjpbeyJ1cmwiOiJodHRwczovL2QyZXk5c3FydmtxZGZzLmNsb3VkZnJvbnQubmV0L1l3QXIvaTEwX20uanBnIiwiZGVzY3JpcHRpb24iOiJTdWl0ZSJ9LHsidXJsIjoiaHR0cHM6Ly9kMmV5OXNxcnZrcWRmcy5jbG91ZGZyb250Lm5ldC9Zd0FyL2kxMV9tLmpwZyIsImRlc2NyaXB0aW9uIjoiU3VpdGUgLSBMaXZpbmcgcm9vbSJ9XSwiYW1lbml0aWVzIjpbeyJ1cmwiOiJodHRwczovL2QyZXk5c3FydmtxZGZzLmNsb3VkZnJvbnQubmV0L1l3QXIvaTU3X20uanBnIiwiZGVzY3JpcHRpb24iOiJCYXIifV19fV0=
+  recorded_at: Sat, 19 Oct 2024 17:09:35 GMT
+- request:
+    method: get
+    uri: https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/paperflies
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 5f2be0b4ffc88500167b85a0.mockapi.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1729357899&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=Q89ReC5OR2YKIqGtuSsG339%2F%2BaC0eoyBh3eTiWLOwmI%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1729357899&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=Q89ReC5OR2YKIqGtuSsG339%2F%2BaC0eoyBh3eTiWLOwmI%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With,Content-Type,Cache-Control,access_token
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '7472'
+      Etag:
+      - '"901251523"'
+      Date:
+      - Sat, 19 Oct 2024 17:11:39 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"hotel_id":"iJhz","destination_id":5432,"hotel_name":"Beach Villas
+        Singapore","location":{"address":"8 Sentosa Gateway, Beach Villas, 098269","country":"Singapore"},"details":"Surrounded
+        by tropical gardens, these upscale villas in elegant Colonial-style buildings
+        are part of the Resorts World Sentosa complex and a 2-minute walk from the
+        Waterfront train station. Featuring sundecks and pool, garden or sea views,
+        the plush 1- to 3-bedroom villas offer free Wi-Fi and flat-screens, as well
+        as free-standing baths, minibars, and tea and coffeemaking facilities. Upgraded
+        villas add private pools, fridges and microwaves; some have wine cellars.
+        A 4-bedroom unit offers a kitchen and a living room. There''s 24-hour room
+        and butler service. Amenities include posh restaurant, plus an outdoor pool,
+        a hot tub, and free parking.","amenities":{"general":["outdoor pool","indoor
+        pool","business center","childcare"],"room":["tv","coffee machine","kettle","hair
+        dryer","iron"]},"images":{"rooms":[{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/2.jpg","caption":"Double
+        room"},{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/3.jpg","caption":"Double
+        room"}],"site":[{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/0qZF/1.jpg","caption":"Front"}]},"booking_conditions":["All
+        children are welcome. One child under 12 years stays free of charge when using
+        existing beds. One child under 2 years stays free of charge in a child''s
+        cot/crib. One child under 4 years stays free of charge when using existing
+        beds. One older child or adult is charged SGD 82.39 per person per night in
+        an extra bed. The maximum number of children''s cots/cribs in a room is 1.
+        There is no capacity for extra beds in the room.","Pets are not allowed.","WiFi
+        is available in all areas and is free of charge.","Free private parking is
+        possible on site (reservation is not needed).","Guests are required to show
+        a photo identification and credit card upon check-in. Please note that all
+        Special Requests are subject to availability and additional charges may apply.
+        Payment before arrival via bank transfer is required. The property will contact
+        you after you book to provide instructions. Please note that the full amount
+        of the reservation is due before arrival. Resorts World Sentosa will send
+        a confirmation with detailed payment information. After full payment is taken,
+        the property''s details, including the address and where to collect keys,
+        will be emailed to you. Bag checks will be conducted prior to entry to Adventure
+        Cove Waterpark. === Upon check-in, guests will be provided with complimentary
+        Sentosa Pass (monorail) to enjoy unlimited transportation between Sentosa
+        Island and Harbour Front (VivoCity). === Prepayment for non refundable bookings
+        will be charged by RWS Call Centre. === All guests can enjoy complimentary
+        parking during their stay, limited to one exit from the hotel per day. ===
+        Room reservation charges will be charged upon check-in. Credit card provided
+        upon reservation is for guarantee purpose. === For reservations made with
+        inclusive breakfast, please note that breakfast is applicable only for number
+        of adults paid in the room rate. Any children or additional adults are charged
+        separately for breakfast and are to paid directly to the hotel."]},{"hotel_id":"SjyX","destination_id":5432,"hotel_name":"InterContinental","location":{"address":"1
+        Nanson Rd, Singapore 238909","country":"Singapore"},"details":"InterContinental
+        Singapore Robertson Quay is luxury''s preferred address offering stylishly
+        cosmopolitan riverside living for discerning travelers to Singapore. Prominently
+        situated along the Singapore River, the 225-room inspiring luxury hotel is
+        easily accessible to the Marina Bay Financial District, Central Business District,
+        Orchard Road and Singapore Changi International Airport, all located a short
+        drive away. The hotel features the latest in Club InterContinental design
+        and service experience, and five dining options including Publico, an Italian
+        landmark dining and entertainment destination by the waterfront.","amenities":{"general":["outdoor
+        pool","business center","childcare","parking","bar","dry cleaning","wifi","breakfast","concierge"],"room":["aircon","minibar","tv","bathtub","hair
+        dryer"]},"images":{"rooms":[{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i93_m.jpg","caption":"Double
+        room"},{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i94_m.jpg","caption":"Bathroom"}],"site":[{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i1_m.jpg","caption":"Restaurant"},{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i2_m.jpg","caption":"Hotel
+        Exterior"},{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i5_m.jpg","caption":"Entrance"},{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i24_m.jpg","caption":"Bar"}]},"booking_conditions":[]},{"hotel_id":"f8c9","destination_id":1122,"hotel_name":"Hilton
+        Tokyo","location":{"address":"160-0023, SHINJUKU-KU, 6-6-2 NISHI-SHINJUKU,
+        JAPAN","country":"Japan"},"details":"This sleek high-rise property is 10 minutes''
+        walk from Shinjuku train station, 6 minutes'' walk from the Tokyo Metropolitan
+        Government Building and 3 km from Yoyogi Park. The polished rooms offer Wi-Fi
+        and flat-screen TVs, plus minibars, sitting areas, and tea and coffeemaking
+        facilities. Suites add living rooms, and access to a club lounge serving breakfast
+        and cocktails. A free shuttle to Shinjuku station is offered. There''s a chic
+        Chinese restaurant, a sushi bar, and a grill restaurant with an open kitchen,
+        as well as an English pub and a hip cocktail lounge. Other amenities include
+        a gym, rooftop tennis courts, and a spa with an indoor pool.","amenities":{"general":["indoor
+        pool","business center","wifi"],"room":["tv","aircon","minibar","bathtub","hair
+        dryer"]},"images":{"rooms":[{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/YwAr/i1_m.jpg","caption":"Suite"},{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/YwAr/i15_m.jpg","caption":"Double
+        room"}],"site":[{"link":"https://d2ey9sqrvkqdfs.cloudfront.net/YwAr/i55_m.jpg","caption":"Bar"}]},"booking_conditions":["All
+        children are welcome. One child under 6 years stays free of charge when using
+        existing beds. There is no capacity for extra beds in the room.","Pets are
+        not allowed.","Wired internet is available in the hotel rooms and charges
+        are applicable. WiFi is available in the hotel rooms and charges are applicable.","Private
+        parking is possible on site (reservation is not needed) and costs JPY 1500
+        per day.","When booking more than 9 rooms, different policies and additional
+        supplements may apply.","The hotel''s free shuttle is offered from Bus Stop
+        #21 in front of Keio Department Store at Shinjuku Station. It is available
+        every 20-minutes from 08:20-21:40. The hotel''s free shuttle is offered from
+        the hotel to Shinjuku Train Station. It is available every 20-minutes from
+        08:12-21:52. For more details, please contact the hotel directly. At the Executive
+        Lounge a smart casual dress code is strongly recommended. Attires mentioned
+        below are strongly discouraged and may not permitted: - Night attire (slippers,
+        Yukata robe, etc.) - Gym clothes/sportswear (Tank tops, shorts, etc.) - Beachwear
+        (flip-flops, sandals, etc.) and visible tattoos. Please note that due to renovation
+        works, the Executive Lounge will be closed from 03 January 2019 until late
+        April 2019. During this period, guests may experience some noise or minor
+        disturbances. Smoking preference is subject to availability and cannot be
+        guaranteed."]}]'
+  recorded_at: Sat, 19 Oct 2024 17:09:36 GMT
+recorded_with: VCR 6.3.1
