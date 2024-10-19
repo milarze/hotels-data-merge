@@ -5,9 +5,14 @@ class ApiLoader
   # Format:
   # { "api1" => [Api1Data1, Api1Data2, ...], "api2" => [Api2Data1, Api2Data2, ...], ... }
   def load_all
-    APIS.map do |api|
-      model_name = api.class.name.split("::").last
-      [model_name.downcase, api.load_all]
-    end.to_h
+    data = []
+    threads = APIS.map do |api|
+      Thread.new do
+        model_name = api.class.name.split("::").last
+        data << [model_name.downcase, api.load_all]
+      end
+    end
+    threads.each(&:join)
+    data.to_h
   end
 end

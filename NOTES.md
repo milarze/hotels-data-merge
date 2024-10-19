@@ -114,3 +114,42 @@ API calls was not going to work. While all the data transformations worked,
 integrating the entire system broke in many different places. This happens
 a lot in Ruby as the language is not statically typed. Having a full
 integration test suite would have caught these issues.
+
+## Notes on the Code
+
+The aim of this assignment is to access technical ability particularly in the
+area of ETL pipelines.
+In light of this, the approach here is always aimed at meeting the requiurement
+technically, before cleaning up and considering other aspects.
+
+There are many areas, where given more time and thought, could be optimised.
+Also in light of time constraints, the testing is focused on proving that the
+code works as expected. Some areas are only partially covered, such as the data
+loaders which are tested by way of the controller integration tests.
+
+## Optimisations
+
+Assuming a worst case scenario where the data sources are continually changing
+and that the user always expects the most up-to-date data, the approach used
+moves the transformation of the data to the request time. This means that
+the request naturally take longer to complete. This was a deliberate trade-off
+taken to ensure that the data is always up-to-date.
+
+In cases where the requirement for data up-to-dateness is not as strict, the
+I would setup a periodic cron that polls and updates the data in the
+background.
+This improves request performance and saves on compute, but requires a somewhat
+persistent data store.
+
+### Specific Optimisations
+
+There are a few areas that optimisations have been made.
+I/O is usually a slow process, so by making then parallel instead of sequential
+we save time.
+The [ApiLoader](app/services/api_loader.rb) class loads all the data from the
+three data sources in parallel before passing off the data to be merged.
+The request time for this went from ~2s to ~700ms.
+
+Another possible optimisation is to cache the data using Redis or some other
+key-value store. This does present the issue of cache invalidation and the
+up-to-dateness of the data.
