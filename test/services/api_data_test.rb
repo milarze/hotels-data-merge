@@ -2,19 +2,8 @@ require "test_helper"
 
 class ApiDataTest < ActiveSupport::TestCase
   def test_get_merged_data
-    api1_json = ActiveSupport::JSON.decode(File.read(Rails.root.join("test/fixtures/files/api1.json")))
-    api2_json = ActiveSupport::JSON.decode(File.read(Rails.root.join("test/fixtures/files/api2.json")))
     api3_json = ActiveSupport::JSON.decode(File.read(Rails.root.join("test/fixtures/files/api3.json")))
-
-    all_data = {
-      "api1" => api1_json.map { |json| ::Api1.from_json(json) },
-      "api2" => api2_json.map { |json| ::Api2.from_json(json) },
-      "api3" => api3_json.map { |json| ::Api3.from_json(json) }
-    }
-    api_loader = Minitest::Mock.new
-    api_loader.expect :load_all, all_data
-
-    ApiLoader.stub :new, api_loader do
+    VCR.use_cassette("api_data_test") do
       api_data = ApiData.new
       merged_data = api_data.get_merged_data
       assert_equal 3, merged_data.size
