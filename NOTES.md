@@ -153,3 +153,12 @@ The request time for this went from ~2s to ~700ms.
 Another possible optimisation is to cache the data using Redis or some other
 key-value store. This does present the issue of cache invalidation and the
 up-to-dateness of the data.
+
+## Deployment
+
+Deploys are done with Fly.io as the CLI tool gives us a really simple way
+to deploy and manage the application.
+
+```shell
+fly launch
+```
