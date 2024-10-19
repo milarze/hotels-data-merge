@@ -3,6 +3,9 @@ class Api3
 
   attr_accessor :hotel_id, :destination_id, :hotel_name, :location, :details, :amenities, :images, :booking_conditions
 
+  alias_attribute :id, :hotel_id
+  alias_attribute :destination, :destination_id
+
   def initialize(
     hotel_id:,
     destination_id:,

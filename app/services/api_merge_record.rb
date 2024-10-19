@@ -9,8 +9,8 @@ class ApiMergeRecord
   def merge
     # Merge the data from the three APIs
     Response.new(
-      id: @api2.id,
-      destination_id: @api2.destination,
+      id: @api1&.id || @api2&.id || @api3.id,
+      destination_id: @api1&.destination || @api2&.destination || @api3.destination,
       # Get the first one with a name
       name: @api1&.name || @api2&.name || @api3.name,
       location: merge_location,
@@ -26,8 +26,8 @@ class ApiMergeRecord
   def merge_location
     # Merge the location data from the three APIs
     Response::Location.new(
-      lat: @api1&.latitude || @api2.latitude,
-      lng: @api1&.longitude || @api2.longitude,
+      lat: @api1&.latitude || @api2&.latitude,
+      lng: @api1&.longitude || @api2&.longitude,
       # Use address with postal code
       address: @api2&.address || @api3.location.address,
       city: @api1.city,
@@ -69,7 +69,7 @@ class ApiMergeRecord
   end
 
   def merge_image_array(*arrays)
-    tuples = arrays.flatten.map { |e| [e.link, e.description] }
+    tuples = arrays.flatten.map { |e| e.nil? ? nil : [e.link, e.description] }.compact
     hash = tuples.to_h
     hash.map do |k, v|
       Response::Image.new(
