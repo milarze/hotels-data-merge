@@ -4,4 +4,8 @@ class DataLoaders::Api1 < DataLoaders::Base
   def url
     URL
   end
+
+  def load_all
+    load_all_json.map { |data| Api1.from_json(data) }
+  end
 end
